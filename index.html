@@ -1,97 +1,144 @@
-<!DOCTYPE html> <!-- to indicate the version of HTML which is HTML5-->
+<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>
-            Lecture0 HTML
-        </title>
-        <style>
-            table{
-                border: 3px solid black;
-                border-collapse: collapse;
+<head>
+    <title>Responsive Design</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <style>
+        h1 {
+            color: red;
+        }
+
+        .div_blue {
+            color: blue;
+            font-size: 26px;
+        }
+
+        .div_black {
+            color: black;
+            font-size: 22px;
+            border: 3px solid orange;
+            width: fit-content;
+            padding: 5px;
+        }
+
+        @media (min-width:600px) {
+            body {
+                background-color: blanchedalmond;
             }
-            th,td{
-                border: 2px solid blue;
-                padding: 5px;
+        }
+
+        @media (max-width: 599px) {
+            body {
+                background-color: yellowgreen;
             }
+        }
 
-        </style>
-    </head>
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    <body>
-        <h1>the biggest heading</h1>
-        <h6>the smallest heading</h6>
-        <br>-------------------------------------------- <br>
-        Ordered list:
-        <ol>
-            <li>first</li>
-            <li>second</li>
-            <li>third</li>
-        </ol>
-        <br>
-        <br>-------------------------------------------- <br>
-        unordered list:
-        <ul>
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-        </ul>
-        <br>-------------------------------------------- <br>
-        <img src="cat.JFIF" alt="a cat sitting on its back" width="300">
-        <!--does not have a closing tag-->
-        <br>-------------------------------------------- <br>
-        <a href="https://www.google.com">click here to open Google</a>
-        <!--a:Anchor tag    href:Hyperlink refrence-->
-        <br>-------------------------------------------- <br>
-        <a href="test.html">Open my test page</a> <!--link to other web pages-->
-        <br>-------------------------------------------- <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th> <!--th:table heading-->
-                    <th>Math</th>
-                    <th>Arabic</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr> <!--tr:table row-->
-                    <td>Ali</td><!--td:table data-->
-                    <td>80</td>
-                    <td>70</td>
-                </tr>
-                <tr>
-                    <td>Omar</td>
-                    <td>60</td>
-                    <td>90</td>
-                </tr>
-            </tbody>
-        </table>
-        <br>-------------------------------------------- <br>
-        <form>
-            <div>
-                <input type="text" placeholder="Full Name" name="full_name">
-                <input type="submit">
-            </div>
-            <div>
-                <input type="password" placeholder="Password" name="password">
-            </div>
-            <div>
-                Favourite color?<br>
-                <input type="radio" value="red" name="color" >Red
-                <input type="radio" value="green" name="color" >Green
-            </div>
-            <div>
-                <input list="countries" name="country" placeholder="Country">
-                <datalist id="countries">
-                    <option value="Egypt"></option>
-                    <option value="England"></option>
-                    <option value="France"></option>
-                    <option value="Germany"></option>
-                </datalist>
-            </div>
-        </form>
-        <br>-------------------------------------------- <br>
+        #container>div {
+            font-size: 30px;
+            background-color: aqua;
+            color: black;
+            margin: 20px;
+            padding: 20px;
+            border: 3px solid blue;
+        }
 
-    </body>
+        #grid {
+            background-color: blueviolet;
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-template-columns: 150px 150px auto;
+            grid-template-rows: 100px 80px 50px ;
+        }
+        .grid-item{
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgb(106, 159, 237);
+            padding: 5px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Viewport</h1>
+    <div class="div_blue">we put the following in the head section in order to make our webpage
+        adapt for different devices:</div>
+    <div class="div_black">
+        ? meta name=" viewport" content="width=device-width,initial-scale=1.0" ? </div>
+
+    <br> <br>
+
+    <h1>Media Queries</h1>
+    <div class="div_blue">we use media queries to control the styling of the page under certian conditions</div>
+
+    <div class="div_black">
+        @media (min-width:600px) {<br>
+        body {<br>
+        background-color: rgb(229, 84, 84);<br>
+        }<br>
+        }<br>
+
+        @media (max-width: 599px) {<br>
+        body {<br>
+        background-color: yellowgreen;<br>
+        }<br>
+        }<br>
+    </div>
+
+
+    <h1>Flexbox</h1>
+    <div class="div_black">
+        #container {<br>
+        display: flex;<br>
+        flex-wrap: wrap;<br>
+        }<br><br>
+        #container > div {<br>
+        font-size: 30px;<br>
+        background-color: aqua;<br>
+        color: black;<br>
+        margin: 20px;<br>
+        padding: 20px;<br>
+        border: 3px solid blue;<br>
+        }<br>
+    </div>
+    <div id="container">
+        <div>BOX 1</div>
+        <div>BOX 2</div>
+        <div>BOX 3</div>
+        <div>BOX 4</div>
+        <div>BOX 5</div>
+        <div>BOX 6</div>
+        <div>BOX 7</div>
+        <div>BOX 8</div>
+    </div>
+
+
+    <h1>Grid</h1>
+
+    <div id="grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+
+    </div>
+
+
+</body>
 
 </html>
