@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!-- to indicate the version of HTML which is HTML5-->
+<html lang="en">
+
+    <head>
+        <title>
+            Lecture0 HTML
+        </title>
+        <style>
+            table{
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                border: 2px solid blue;
+                padding: 5px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>the biggest heading</h1>
+        <h6>the smallest heading</h6>
+        <br>-------------------------------------------- <br>
+        Ordered list:
+        <ol>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ol>
+        <br>
+        <br>-------------------------------------------- <br>
+        unordered list:
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <br>-------------------------------------------- <br>
+        <img src="cat.JFIF" alt="a cat sitting on its back" width="300">
+        <!--does not have a closing tag-->
+        <br>-------------------------------------------- <br>
+        <a href="https://www.google.com">click here to open Google</a>
+        <!--a:Anchor tag    href:Hyperlink refrence-->
+        <br>-------------------------------------------- <br>
+        <a href="test.html">Open my test page</a> <!--link to other web pages-->
+        <br>-------------------------------------------- <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th> <!--th:table heading-->
+                    <th>Math</th>
+                    <th>Arabic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <!--tr:table row-->
+                    <td>Ali</td><!--td:table data-->
+                    <td>80</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>Omar</td>
+                    <td>60</td>
+                    <td>90</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>-------------------------------------------- <br>
+        <form>
+            <div>
+                <input type="text" placeholder="Full Name" name="full_name">
+                <input type="submit">
+            </div>
+            <div>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <div>
+                Favourite color?<br>
+                <input type="radio" value="red" name="color" >Red
+                <input type="radio" value="green" name="color" >Green
+            </div>
+            <div>
+                <input list="countries" name="country" placeholder="Country">
+                <datalist id="countries">
+                    <option value="Egypt"></option>
+                    <option value="England"></option>
+                    <option value="France"></option>
+                    <option value="Germany"></option>
+                </datalist>
+            </div>
+        </form>
+        <br>-------------------------------------------- <br>
+
+    </body>
+
+</html>
